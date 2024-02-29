@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, computed, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
@@ -26,4 +26,8 @@ import { CommonModule } from '@angular/common';
 })
 export class AppComponent {
   title = 'angular-dashboard';
+
+  collapsed = signal(false);
+
+  sidenavwidth = computed( () => this.collapsed() ? '65px' : '250px');
 }
