@@ -3,17 +3,9 @@
         <mat-icon mat-card-avatar>lightbulb</mat-icon>
         <mat-card-title>Light 1</mat-card-title>
         <mat-card-subtitle>Kitchen</mat-card-subtitle>
+        <mat-slide-toggle></mat-slide-toggle>
       </mat-card-header>
-    <mat-card-content>
-      <p>This card has divider and indeterminate progress as footer</p>
-      <p>tester</p>
-      <mat-divider></mat-divider>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-button>On</button>
-      <button mat-button>Off</button>
-    </mat-card-actions>
-    <mat-card-footer>
+    <mat-card-footer *ngIf="">
       <mat-progress-bar mode="indeterminate"></mat-progress-bar>
     </mat-card-footer>
 </mat-card>
