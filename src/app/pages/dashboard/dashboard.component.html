@@ -1,1 +1,32 @@
-<app-widget-toggles></app-widget-toggles>
+<mat-tab-group>
+    <mat-tab label="Living Room">
+
+        <div class="device-group">
+            <h3 class="title">Device Type</h3>
+            <div class="container responsive-grid">
+                <app-widget-toggles *ngFor="let device of devices" [device]="device"></app-widget-toggles>
+            </div>
+        </div>
+
+        <div class="device-group">
+            <h3 class="title">Cameras</h3>
+            <div class="container responsive-grid">
+                <app-widget-toggles></app-widget-toggles>
+                <app-widget-toggles></app-widget-toggles>
+                <app-widget-toggles></app-widget-toggles>
+                <app-widget-toggles></app-widget-toggles>
+                <app-widget-toggles></app-widget-toggles>
+                <app-widget-toggles></app-widget-toggles>
+                <app-widget-toggles></app-widget-toggles>
+                <app-widget-toggles></app-widget-toggles>
+            </div>
+        </div>
+        
+
+
+    </mat-tab>
+    <mat-tab label="Bedroom 1"> Bedroom 1 </mat-tab>
+    <mat-tab label="Kitchen"> Kitchen </mat-tab>
+    <mat-tab label="Garage"> Garage </mat-tab>
+    <mat-tab label="Porch Area"> Porch Area </mat-tab>
+</mat-tab-group>

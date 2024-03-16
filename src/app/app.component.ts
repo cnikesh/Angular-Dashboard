@@ -8,6 +8,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { CustomSidenavComponent } from "./components/custom-sidenav/custom-sidenav.component";
 import { CommonModule } from '@angular/common';
 import { MatNavList } from '@angular/material/list';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
     selector: 'app-root',
@@ -23,7 +24,8 @@ import { MatNavList } from '@angular/material/list';
         MatSlideToggleModule,
         MatSidenavModule,
         CustomSidenavComponent,
-        MatNavList
+        MatNavList,
+        HttpClientModule
     ]
 })
 export class AppComponent {
