@@ -28,6 +28,7 @@ export class DashboardComponent implements OnInit {
     devices: DeviceInterface[] = [];
     selectedTabIndex = signal(0);
     prefetchTabs = signal(true);
+    deviceTypes:any[] = [];
 
     
 
@@ -51,7 +52,7 @@ export class DashboardComponent implements OnInit {
     getDevicesByGroup(groupId: number){
         this.deviceService.getDevicesByGroup(groupId).subscribe({
             next: (res) => {
-                this.devices = res;
+                this.deviceTypes = res;
             },
             error: console.log,
         })

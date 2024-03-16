@@ -1,38 +1,22 @@
 <mat-tab-group (selectedIndexChange)="onTabChange($event)">
     <mat-tab label="Living Room">
         @defer(when selectedTabIndex() === 0; prefetch when prefetchTabs()){
-        <div class="device-group">
-            <h3 class="title">Device Type</h3>
+        <div class="device-group" *ngFor="let type of deviceTypes">
+            <h3 class="title">{{type.typeName}}</h3>
             <div class="container responsive-grid">
-                    <app-widget-toggles *ngFor="let device of devices" [device]="device"/>
+                    <app-widget-toggles *ngFor="let device of type.devices" [device]="device"/>
             </div>
         </div>
-
-        <div class="device-group">
-            <h3 class="title">Cameras</h3>
-            <div class="container responsive-grid">
-                <app-widget-toggles></app-widget-toggles>
-                <app-widget-toggles></app-widget-toggles>
-                <app-widget-toggles></app-widget-toggles>
-                <app-widget-toggles></app-widget-toggles>
-                <app-widget-toggles></app-widget-toggles>
-                <app-widget-toggles></app-widget-toggles>
-                <app-widget-toggles></app-widget-toggles>
-                <app-widget-toggles></app-widget-toggles>
-            </div>
-        </div>
-        
-
     }
     </mat-tab>
     <mat-tab label="Bedroom 1">         
         @defer(when selectedTabIndex() === 1; prefetch when prefetchTabs()){
-        <div class="device-group">
-            <h3 class="title">Device Type</h3>
-            <div class="container responsive-grid">
-                    <app-widget-toggles *ngFor="let device of devices" [device]="device"/>
+            <div class="device-group" *ngFor="let type of deviceTypes">
+                <h3 class="title">{{type.typeName}}</h3>
+                <div class="container responsive-grid">
+                        <app-widget-toggles *ngFor="let device of type.devices" [device]="device"/>
+                </div>
             </div>
-        </div>
         
 
     } </mat-tab>
